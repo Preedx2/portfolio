@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Programowanie2_Projekt2</title>
+    <!--pobieram ikonkę menu z darmowej strony fontawesome-->
+    <script src="https://kit.fontawesome.com/45dd80398a.js" crossorigin="anonymous"></script>
+    <script src="js/site.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<!-- do body dodaję mój gradient wyświetlany w tle -->
+<body class="main dark-bckgrnd-grad">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index"><h3>Moja Biblioteczka</h3></a>
+                <!-- Menu - domyślnie ukryte, pojawia się po kliknięciu przycisku -->
+                <nav class="menu" id="myLinks">
+                    <a asp-page="/Forms/Create" class="button button-blue">Utwórz</a>
+                    <a asp-page="/Forms/View" class="button button-blue">Książki</a>
+                    <a asp-page="/Privacy" class="button button-blue">Prywatność</a>
+                </nav>
+                <!-- Przycisk menu -->
+                <a href="javascript:void(0);" title="Menu" class="menu-icon" onclick="menuAction()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Programowanie2_Projekt2 - <a asp-area="" asp-page="/Privacy">Prywatność</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

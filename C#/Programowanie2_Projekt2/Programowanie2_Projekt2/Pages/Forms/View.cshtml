@@ -1,0 +1,38 @@
+﻿@page
+@model Programowanie2_Projekt2.Pages.Forms.ViewModel
+@{
+	ViewData["Title"] = "View";
+}
+<!--Wyświetlenie tego, jakie wpisy znajdują się w bazie danych za pomocą siatki tytułów i okładek-->
+<form method="post">
+
+	@if (Model.bookList.Count() > 0)
+	{
+		<div class="row">
+			@foreach (var item in Model.bookList)	//dla każdej książki w bazie
+			{
+				<div class="col-auto">
+					<div class="frame">	
+						<a asp-page="/Forms/Read" asp-route-id="@item.Id"><h5 class="frame-title">@item.Title</h5>
+							@{	//wyświetlanie obrazka - domyślnie zakładam jego brak
+								string path = Environment.CurrentDirectory + @".\Data\" + "b.bmp";
+
+								if(item.Image != null)	//jeżeli jednak jest, to zmieniam ścieżkę
+								{	
+									path = Environment.CurrentDirectory + @".\Data\" + item.Image;
+								}
+								byte[] filebytes = System.IO.File.ReadAllBytes(path);	//wyświetlam obrazek
+								<img class="frame-cover" src="data:image/jpg; base64,@(Convert.ToBase64String(filebytes))" />
+							}
+						</a>
+					</div>
+				</div>
+			}
+		</div>
+	}
+	else
+	{
+		<p>Brak Wpisów</p>
+	}
+
+</form>

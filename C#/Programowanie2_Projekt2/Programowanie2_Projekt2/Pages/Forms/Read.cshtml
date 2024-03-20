@@ -1,0 +1,89 @@
+﻿@page
+@model Programowanie2_Projekt2.Pages.Forms.ReadModel
+@{
+	ViewData["Title"] = "Read";
+}
+<!--Podstrona do przeglądania wpisu z bazy danych-->
+<div class="big-container">
+	<!--Wyświetlam w oparciu o tabelkę-->
+	<table width="100%">
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Title"></label>
+			</td>
+			<td>
+				<label asp-for="Book.Title" style="font-size:large">@Model.Book.Title</label>
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Author" style="font-size:large"></label>
+			</td>
+			<td>
+				<label asp-for="Book.Author">@Model.Book.Author</label>
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Description" style="font-size:large"></label>
+			</td>
+			<td>
+				<textarea asp-for="Book.Description" cols="100" rows="5" readonly="readonly">
+					@Model.Book.Description
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Image" style="font-size:large"></label>
+			</td>
+			<td>
+				@if(Model.Book.Image != null)	//jeżeli jest powiązane zdjęcie, to wyświetl je
+				{
+					<img src="data:image/jpg; base64,@(Convert.ToBase64String(
+							Model.filebytes))" width="750" />
+				}
+			</td>
+		</tr>
+	</table>
+	<!--tworzę druga tabelkę dla ładniejszego formatowania (inna liczba kolumn)-->
+	<table width="100%">
+		<tr><br /></tr>
+		<tr>
+			<td width="23%">
+				<label asp-for="Book.ISBN">ISBN: @Model.Book.ISBN</label>
+			</td>
+			<td width="10%">
+				<label asp-for="Book.ISBN" />
+			</td>
+			<td width="23%">
+				<label asp-for="Book.Pages">@Model.Book.Pages Stron</label>
+			</td>
+			<td width="10%">
+				<label asp-for="Book.Pages" />
+			</td>
+			<td width="23%">
+				@if(Model.Book.Read){	//wyświetlanie pola "Read"" jako tekst zamiast wartości true/false 
+					<label asp-for="Book.Read">Przeczytano</label>
+				}
+				else
+				{
+					<label asp-for="Book.Read">Nie Przeczytano</label>
+				}
+			</td>
+			<td width="10%">
+				<label asp-for="Book.Read" />
+			</td>
+		</tr>
+	</table>
+	<br /><br />
+	<!--Tworzę formularz którego jedyną funkcją jest w zasadzie usuwanie wpisu-->
+	<form method="POST">
+		<div style="text-align:right">
+			<!--Przyciski do edycji obecnego wpisu, usunięcia go bądź powrotu do widoku głównego-->
+			<a asp-page="/Forms/Update" asp-route-id="@Model.Book.Id" class="button button-yellow">Edytuj</a>			
+			<button type="submit" asp-page-handler="Delete" asp-route-id="@Model.Book.Id" class="button button-red">Usuń</button>			
+			<a asp-page="/Forms/View" class="button button-green">Powrót</a>
+		</div>
+	</form>
+</div>

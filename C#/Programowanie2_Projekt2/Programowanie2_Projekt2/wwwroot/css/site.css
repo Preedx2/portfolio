@@ -1,0 +1,231 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* ================== Buttony z zajec ===================*/
+.button {
+    border: none;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-green {
+    background-color: green;
+    color: white;
+}
+
+.button-blue {
+    background-color: blue;
+    color: white;
+}
+
+.button-red {
+    background-color: red;
+    color: white;
+}
+
+.button-yellow {
+    background-color: yellow;
+    color: black;
+}
+
+/*  ============= Moje Stylowanie ============= */
+/*Ukryte menu z nagłówka*/
+#myLinks {
+    display: none;
+    float: right;
+    margin-left: 500px;
+}
+
+/*Przyciski*/
+.menu a {
+    color: black;
+    background-color: #00AAFF;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    float: right;
+    border: 1px solid #FFFFFF;
+}
+
+.menu a:hover {
+    background-color: #22CCFF;
+}
+
+/*Ikonka powiązana ze scryptem wyświetlającym menu*/
+.menu-icon {
+    background-color: white;
+    color: #00AAFF;
+    display: inline-block;
+    font-size: 40px;
+    width: 50px;
+    float: right;
+    margin: auto 0 auto 0;
+}
+
+.menu-icon:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+/*Gradient tła*/
+.dark-bckgrnd-grad {
+    background-image: linear-gradient(to right, #141e30, #243b55);
+}
+
+.index-main {
+    text-align: center;
+}
+
+.index-books {
+    display: block;
+    margin: 30px auto 30px auto;
+    border-radius: 20px;
+}
+
+.index-books:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.header {
+    background-color: white;
+}
+
+.footer {
+    background-color: white;
+}
+
+/* Domyslny kontener w moich podstronach*/
+.big-container {
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+
+/*Ramka przechowująca tytuł i okładkę w GridViewie*/
+.frame {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    width: 350px;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+/*Tytuł książki.*/
+.frame-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -15px);
+    display: block;
+    width: fit-content;
+    min-width: 80px;
+    max-width: 250px;
+    overflow-wrap: break-word; /*wymuszam rozbicie dłuższego tytułu aby nie wystatwał za przydzielony obszar*/
+    padding: 0 10px 0 10px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/*Okładka - klikalny obrazek przekierowujący do powiązanego obiektu*/
+.frame-cover {
+    max-width: 350px;
+    max-height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    border: 5px solid white;
+}
+
+.frame:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*formatowanie wiadomości błędu*/
+.invalid-input {
+    font-weight: bold;
+    color: red;
+}
+
+/* ===== Poniżej domyślne wartości z projektu ============== */
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}

@@ -1,0 +1,92 @@
+﻿@page
+@model Programowanie2_Projekt2.Pages.Forms.UpdateModel
+@{
+	ViewData["Title"] = "Update";
+}
+
+<!--Aktualizacja wpisu z bazy-->
+<form class="big-container" method="post" enctype="multipart/form-data">
+<br/>
+<h3>Edytuj wpis</h3>
+<br/>
+	<table width="100%">
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Title" style="font-size:large"></label>
+			</td>
+			<td>
+				<input asp-for="Book.Title"/>
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Author" style="font-size:large"></label>
+			</td>
+			<td>
+				<input asp-for="Book.Author" />
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Description" style="font-size:large"></label>
+			</td>
+			<td>
+				<textarea asp-for="Book.Description" cols="100" rows="5"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">
+			</td>
+			<td>
+				@if(Model.Book.Image != null)	//jeśli istnieje to wyświetl obrazek
+				{
+					<img src="data:image/jpg; base64,@(Convert.ToBase64String(Model.filebytes))" width="750" />
+				}
+			</td>
+		</tr>
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.Image"></label>
+			</td>
+			<td>
+				<input type="file" asp-for="PhotoFile" />
+			</td>
+		</tr>
+	</table>
+	<table width="100%">
+		<tr>
+			<td width="15%">
+				<label asp-for="Book.ISBN" style="font-size:large"></label>
+			</td>
+			<td width="23%">
+				<input asp-for="Book.ISBN" />
+			</td>
+			<td width="10%">
+				<label asp-for="Book.Pages" style="font-size:large"></label>
+			</td>
+			<td width="23%">
+				<input asp-for="Book.Pages" />
+			</td>
+			<td width="10%">
+				<label asp-for="Book.Read" style="font-size:large"></label>
+			</td>
+			<td width="23%">
+				<input asp-for="Book.Read" />
+			</td>
+		</tr>
+	</table>
+	<!-- Wyświetlanie komunikatów błędu -->
+	<br />
+	<span class="invalid-input" asp-validation-for="Book.ISBN"></span>
+	<br />
+	<span class="invalid-input" asp-validation-for="Book.Pages"></span>
+	<br />
+	@if(Model.TitleTaken){
+		<span class="invalid-input" >Istnieje już książka o podanym tytule. Każda książka powinna mieć inny tytuł. </span>
+		<br/>
+	}
+	<div style="text-align:right">
+		<button type="submit" class="button button-blue">Zapisz</button>
+		<a asp-page="/Forms/View" class="button button-green">Powrót</a>
+	</div>
+</form>

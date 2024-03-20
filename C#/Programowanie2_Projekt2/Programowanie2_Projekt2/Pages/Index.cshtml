@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="big-container">
+<h1 style="background-color: white; text-align:center;">Witaj w aplikacji moja biblioteczka!</h1>
+    <a class="index-main" asp-area="" asp-page="/Forms/View">  
+        @{  string path = Environment.CurrentDirectory + @".\Data\" + "a.jpg";
+            byte[] filebytes = System.IO.File.ReadAllBytes(path);
+		    <img class="index-books" src="data:image/jpg; base64,@(Convert.ToBase64String(filebytes))"/>
+        } 
+    </a>
+</div>

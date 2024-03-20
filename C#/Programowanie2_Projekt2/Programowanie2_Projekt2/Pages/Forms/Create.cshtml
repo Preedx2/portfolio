@@ -1,0 +1,87 @@
+﻿@page
+@model Programowanie2_Projekt2.Pages.Forms.CreateModel
+@{
+	ViewData["Title"] = "Create";
+}
+<!--Podstrona służąca stworzeniu nowego wpisu w bazie za pomocą formularza-->
+<form class="big-container" method="post" enctype="multipart/form-data">
+	<br/>
+	<h3>Utwórz nowy wpis</h3>
+	<br/>
+	<!--Poszczególne elementy wyświetlamy w tabelce. W komórkach tej tabelki znajdą się
+		etykiety i pola "input" powiązane z modelem naszej książki
+	-->
+	<table width="100%">
+		<tr>
+			<td width="10%">
+				<label asp-for="Book.Title"></label>
+			</td>
+			<td>
+				<input asp-for="Book.Title"/>
+				<span class="invalid-input" asp-validation-for="Book.Title"></span>
+			</td>
+		</tr>
+		<tr>
+			<td width="10%">
+				<label asp-for="Book.Author"></label>
+			</td>
+			<td>
+				<input asp-for="Book.Author" />
+			</td>
+		</tr>
+		<tr>
+			<td width="10%">
+				<label asp-for="Book.Description"></label>
+			</td>
+			<td>
+				<textarea asp-for="Book.Description" cols="100" rows="5"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td width="10%">
+				<label asp-for="Book.Image"></label>
+			</td>
+			<td>
+				<input type="file" asp-for="PhotoFile" />
+			</td>
+		</tr>
+	</table>
+	<!--Tworzę drugą tabelę o innym rozkładzie komórek dla ładniejszego formatowania-->
+	<table width="100%">
+		<tr>
+			<td width="10%">
+				<label asp-for="Book.ISBN"></label>
+			</td>
+			<td width="23%">
+				<input asp-for="Book.ISBN" />
+			</td>
+			<td width="10%">
+				<label asp-for="Book.Pages"></label>
+			</td>
+			<td width="23%">
+				<input asp-for="Book.Pages" />
+			</td>
+			<td width="10%">
+				<label asp-for="Book.Read"></label>
+			</td>
+			<td width="23%">
+				<input asp-for="Book.Read" />
+			</td>
+		</tr>
+	</table>
+	<!--Komunikaty błędu przy niepomyślnej walidacji wprowadzonych danych-->
+	<br />
+	<span class="invalid-input" asp-validation-for="Book.ISBN"></span>
+	<br />
+	<span class="invalid-input" asp-validation-for="Book.Pages"></span>
+	<br />
+	@if(Model.TitleTaken){
+		<span class="invalid-input" >Istnieje już książka o podanym tytule. Każda książka powinna mieć inny tytuł. </span>
+		<br/>
+	}
+	<div style="text-align:right">
+		<!--Przycisk potwierdzenia formularza i przycisk powrotu-->
+		<button type="submit" class="button button-blue">Zapisz</button>
+		<a asp-page="/Forms/View" class="button button-green">Powrót</a>
+	</div>
+</form>

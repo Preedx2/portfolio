@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Programowanie2_Projekt1.CreateUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Programowanie2_Projekt1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10,10,10,10">
+            <Label Margin="0,0,0,10" Name="lblMain" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Symbol" HorizontalAlignment="Center" >Biblioteczka</Label>
+            <Label Margin="0,0,0,2" Name="lblCreate" HorizontalAlignment="Center">Dodawanie nowej pozycji do domowej biblioteczki</Label>
+
+            <TextBox Margin="10,2,10,2" IsReadOnly="False" Name="txtTitle" Text="Tytuł" GotFocus="txtTitle_GotFocus"/>
+            <Button Margin="10,0,10,0" Content="Dodaj Zdjęcie" Name="btnUpload" Click="btnUpload_Click"/>
+            <Image Margin="40,0,40,0" HorizontalAlignment="Center" Name ="imgCover" MinHeight="50"/>
+            <Grid Margin="10,2,10,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0" Margin="0,2,5,0" IsReadOnly="False" Name="txtISBN" Text="ISBN" ToolTip="ISBN" GotFocus="txtISBN_GotFocus" />
+                <TextBox Grid.Column="1" Margin="5,2,5,0" IsReadOnly="False" Name="txtPages" Text="Strony" ToolTip="Liczba Stron" GotFocus="txtPages_GotFocus"/>
+                <CheckBox Grid.Column="2" Margin="5,2,0,0" Name="chkRead" VerticalAlignment="Center">Przeczytano?</CheckBox>
+            </Grid>
+            <TextBox Margin="10,2,10,2" IsReadOnly="False" Name="txtAuthor" Text="Autor" ToolTip="Autor" GotFocus="txtAuthor_GotFocus"/>
+            <TextBox Margin="10,2,10,2" IsReadOnly="False" Name="txtDsc" ToolTip="Krótki opis książki" TextWrapping="Wrap"
+                     MinHeight="50" MaxHeight="150" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     Text="Opis" TextAlignment="Justify" GotFocus="txtDsc_GotFocus"/>
+
+            <Button Margin="2,2,2,2" Content="Potwierdź" Name="btnConfirm" Click="btnConfirm_Click"/>
+            <Button Content="Wróć" Name="btnBack" Click="btnBack_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
