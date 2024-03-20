@@ -1,0 +1,1025 @@
+:root {
+	/*	
+		Color values for default (light) style
+		defined in css for people with <noscript>.
+		For scripted users they will be overwriten
+		(although initially with the same values)
+	*/
+	--plain-bckgrnd: #FFF;
+	--box-bckgrnd: #EEE;
+	--bttn-bckgrnd: #00AAFF;
+	--bttn-dark-bckgrnd: #00AAFF;
+	--bttn-bckgrnd-hvr: #22CCFF;
+
+	--txt:	#000;
+	--box-txt: #000;
+	--bttn: #FFF;
+	--btnn-dark: #FFF;
+	--bttn-hvr: #FFF;
+
+	--error: #F00;
+
+	--link: #0000EE;
+	--visited: #551A8B;
+
+	--bttn-brdr: #EEE;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--txt);
+}
+
+.body-lightgrad {
+	background-image: linear-gradient(to right, #00b4db, #33DDEE);
+}
+
+.body-darkgrad {
+	background-image: linear-gradient(to right, #141e30, #243b55);
+}
+
+a {
+	color: var(--link);
+}
+
+a:visited {
+	color: var(--visited);
+}
+
+/*	================	Header	==================
+	header is common across all html files
+	I tried implementing it in separate file 
+	but there were mobile compatibility issues, 
+	so i resorted to copy-pasting it to all .html files.
+*/
+header {
+	background-color: var(--plain-bckgrnd);
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	z-index: 2;	/* ensures header is always on top */
+	display: block;
+	text-align: center;
+}
+
+.logo{
+	float: left;
+	color: #000;
+	text-decoration: none;
+}
+
+.logo-nav {
+	display: block;
+	color: #00AAFF;
+	width: 50px;
+	height: 100%;
+	margin: 15px 0px 0px 10px;
+	font-size: 20px;
+}
+
+.logo-nav:hover {
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+/*hiding this text on mobile devices*/
+.logo-nav-txt {
+	display: none;
+}
+
+.searchbar {
+	display: block;
+	margin: 10px 70px 0 70px;
+	width: auto;
+}
+
+.searchbar input {
+	width: auto;
+	border: none;
+	float: left;
+	width: 85%;
+	font-size: 1.3em;
+	color: var(--box-txt);
+	background-color: var(--box-bckgrnd);;
+}
+
+.searchbar button {
+	float: left;
+    padding: 4px 10px;
+    background: var(--bttn-bckgrnd);
+    color: var(--bttn);
+    width: 15%;
+    border: 1px solid var(--bttn-brdr);
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+
+.searchbar button:hover {
+    background: var(--bttn-bckgrnd-hvr);
+}
+
+@media (min-width: 870px) {
+	/*	Adjusting header for wider screens	*/
+.logo-nav {		width: 125px; margin-left: 30px;	}
+.logo-nav-txt { display: inline;	}
+.searchbar {	margin: 10px 150px 0 200px;	}
+.searchbar input {	width: 93%;		}
+.searchbar button {	width: 7%;		}
+}
+
+/*	hiding links in the hamburger menu */
+#myLinks {
+	display: none;
+}
+
+.menu {
+	margin: 5px 60px;
+}
+
+.menu a {
+  color: var(--bttn);
+  background-color: var(--bttn-bckgrnd);
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  float: right;
+  border: 1px solid var(--bttn-brdr);
+}
+
+.menu a:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+}
+
+.menu-icon {
+	background-color: var(--plain-bckgrnd);
+	color: #00AAFF;
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 5px 15px 0 0;
+}
+
+.menu-icon:hover {
+	transform: scale(1.2);
+	transition-duration: 0.5s;
+}
+
+.menu-dark {
+	background-color: var(--bttn-dark-bckgrnd);
+	color: var(--btnn-dark);
+}
+
+.fa-moon {
+	color: var(--bttn-dark);
+}
+
+.fa-moon:hover {
+	color: var(--bttn-hvr);
+}
+
+/*	==========	Footer 	=============
+	shared across html files
+*/
+footer {
+	background-color: var(--plain-bckgrnd);
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	z-index: 2; /* ensures footer is always on top */
+}
+
+.social {
+	display: inline-block;
+	float: right;
+	margin-top: 7px;
+	margin-right: 15px;
+}
+
+footer button {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	color: var(--plain-bckgrnd);
+	border-radius: 50%;
+	border: none;
+	font-size: 30px;
+	background-color: var(--plain-bckgrnd);
+}
+
+footer button:hover {
+	transform: scale(1.2);
+	color: var(--plain-bckgrnd);
+}
+
+.footer-about{
+	margin: 7px 0 0 15px;
+}
+
+.fa-message {
+	color: #00AAFF;
+}
+
+.fa-twitter {
+	color: #4099FF;
+}
+
+.fa-facebook {
+	color: #3B5998
+}
+
+.fa-instagram {
+	color: #5C3D2E;
+}
+
+.fa-github {
+	color: #4183C4;
+}
+
+/* ============	index.php	=============
+*/
+
+.gallery {
+	margin: 50px 5% 50px 5%;
+}
+
+/*	Setting up grid */
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*	Columns definitions	*/
+[class*="col-"] {
+	width: 100%;
+	padding: 5px;
+	float: left;
+}
+
+/*	For vertical mobile	*/
+.col-t-1 {width: 8.33%;}
+.col-t-2 {width: 16.66%;}
+.col-t-3 {width: 25%;}
+.col-t-4 {width: 33.33%;}
+.col-t-5 {width: 41.66%;}
+.col-t-6 {width: 50%;}
+.col-t-7 {width: 58.33%;}
+.col-t-8 {width: 66.66%;}
+.col-t-9 {width: 75%;}
+.col-t-10 {width: 83.33%;}
+.col-t-11 {width: 91.66%;}
+.col-t-12 {width: 100%;}
+
+@media (min-width: 580px) {
+	/* For horizontal mobile/tiny desktop/vertical tablets: */
+	.gallery {margin: 50px 2% 50px 2%;}
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 {width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+}
+
+@media (min-width: 1320px) {
+	/* For medium desktop/horizontal tablets: */
+	.col-m-1 {width: 8.33%;}
+	.col-m-2 {width: 16.66%;}
+	.col-m-3 {width: 25%;}
+	.col-m-4 {width: 33.33%;}
+	.col-m-5 {width: 41.66%;}
+	.col-m-6 {width: 50%;}
+	.col-m-7 {width: 58.33%;}
+	.col-m-8 {width: 66.66%;}
+	.col-m-9 {width: 75%;}
+	.col-m-10 {width: 83.33%;}
+	.col-m-11 {width: 91.66%;}
+	.col-m-12 {width: 100%;}
+}
+
+@media (min-width: 1700px) {
+	/* For 1080p desktop: */
+	.col-b-1 {width: 8.33%;}
+	.col-b-2 {width: 16.66%;}
+	.col-b-3 {width: 25%;}
+	.col-b-4 {width: 33.33%;}
+	.col-b-5 {width: 41.66%;}
+	.col-b-6 {width: 50%;}
+	.col-b-7 {width: 58.33%;}
+	.col-b-8 {width: 66.66%;}
+	.col-b-9 {width: 75%;}
+	.col-b-10 {width: 83.33%;}
+	.col-b-11 {width: 91.66%;}
+	.col-b-12 {width: 100%;}
+}
+
+/*	Putting additional div to ensure that the images are centered,
+	doesnt work when implemented directly on columns or images*/
+.gallery-frame{
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+.gallery-img {
+	position: absolute;
+	max-width: 300px;
+	max-height: 300px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 20px;
+	border: 5px solid var(--plain-bckgrnd);
+}
+
+@media (min-width: 580px) {
+	/* images get shrunk a little to better fit
+		horizontal mobile */
+	.gallery-frame {	width: 280px;		height: 280px;	}
+	.gallery-img {		max-width: 280px;	max-height: 280px; }
+}
+
+@media (min-width: 870px) {
+	.gallery-frame {	width: 410px;	height: 410px;	}
+	.gallery-img {	
+		max-width: 410px;	
+		max-height: 410px;
+		border-width: 10px;
+		}
+	[class*="col-"] {	padding: 15px;	}
+}
+
+.gallery-img:hover {
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	z-index: 1;
+	border-radius: 0px;
+	border: 0 none;
+}
+
+/*	=========== Login/index.php ================ */
+.login {
+	height: 440px;
+	width: 300px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+@media (min-width: 870px) {
+.login {	width: 420px;}
+}
+
+.login > * {
+	font-size: 1.2em;
+}
+
+.login-uname {
+	display: block;
+	margin: 75px auto 0px auto;
+	width: 80%;
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+}
+
+.login-pwd {
+	display: block;
+	margin: 30px auto 0px auto;
+	width: 80%;
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+}
+
+.login-chkbox {
+	margin: 10px auto 0px 50px;
+}
+
+.login-submit {
+	display: block;
+	margin: 40px auto 0px auto;
+	width: 50%;
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+	border-radius: 5px;
+}
+
+.login-submit:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.login-register{
+	display: block;
+	margin: 20px auto auto auto;
+	width: 50%;
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+	border-radius: 5px;
+}
+
+.login-register:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.login-forgot {
+	display: block;
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+	text-align: center;
+}
+
+.login-error {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+
+/*	========= Register/index.php ========= */
+.reg {
+	height: 550px;
+	width: 300px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+@media (min-width: 870px) {
+.reg {	width: 500px;}
+}
+
+.reg > * {
+	font-size: 1.2em;
+}
+
+[class*="reg-"] {
+	width: 80%;
+	margin: 15px auto 0px auto;
+	display: block;
+}
+
+[class*="reg-"] > *{
+	display: block;
+	width: 100%;
+}
+
+[class*="reg-"] > input {
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+}
+
+.reg-uname {
+	margin-top: 50px;
+}
+
+.reg-submit{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+	border-radius: 5px;
+}
+
+.reg-submit:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+/*	==========	About/index.php	============= 
+Shows using children and html tags instead of
+only classes */
+.about {
+	min-width: 300px;
+	width: 80%;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+.about > * {
+	width: 90%;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+.about-agreements {
+	text-align: justify;
+}
+
+.about > h1 {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.about > ul {
+	margin-bottom: 60px;
+}
+
+/*	==========	Picture/index.php	============= */
+.pict-cont {
+	min-width: 350px;
+	width: 90%;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+.pict-cont-title {
+	text-align: center;
+}
+
+.pict-cont-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	max-width: 90%;
+	max-height: 1100px;
+}
+
+.pict-cont-info {
+	width: 80%;
+	margin: 15px auto 40px auto;
+}
+
+.pict-cont-meta {
+	display: inline-block;
+	width: 20%
+	float: right;
+	text-align: center;
+	background-color: var(--box-bckgrnd);
+	color: var(--txt);
+	border-radius: 10px;
+	margin-left: 10px;
+}
+
+.pict-cont-avatar {
+	display: block;
+	height: 120px;
+	width: 120px;
+	padding: 10px 10px 10px 10px;
+	border-radius: 20px;
+}
+
+.pict-cont-meta:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+}
+
+.pict-cont-box {
+	display: inline-block;
+	width: 80%;
+	max-height: 150px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.pict-cont-desc {
+	max-height: 150px;
+	overflow-y: auto;
+	text-align: justify;
+	border-radius: 20px;
+	background-color: var(--box-bckgrnd);
+}
+
+.pict-cont-desc-text {
+	width: 90%;
+	margin: 5px 5% 5px 5%;
+}
+
+.pict-cont-tags {
+	display: inline-block;
+	margin: 10px auto 60px auto;
+	background-color: var(--plain-bckgrnd);
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.pict-cont-tag {
+	display: inline;
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+	margin: 5px 10px 5px 5px;
+	border-radius: 10px;
+	padding: 5px 5px 5px 5px;
+}
+
+.pict-cont-delete {
+	display: inline;
+	float: right;
+	margin: 10px auto 10px auto;
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+}
+
+.pict-cont-delete:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.pict-hidden-link {
+	text-decoration: none!important;
+}
+
+.pict-cont-tag:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+
+/*	==========	Account/index.php	============= */
+.acc {
+	min-width: 320px;
+	width: 320px;
+	height: auto;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	margin: auto auto 20px auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+.acc-info {
+	display: block;
+	float: left;
+	width: 320px;
+	margin: auto auto 40px auto;
+}
+
+#acc-info-uname {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+#acc-info-upicture {
+	display: block;
+	height: 165px;
+	width: 165px;
+	padding: 15px;
+	background-color: var(--box-bckgrnd);
+	border-radius: 10px;
+	margin: 20px auto;
+}
+
+.acc-info-show {
+	display: block;
+	color: var(--bttn);
+	background-color: var(--bttn-bckgrnd);
+	margin: 20px auto 20px auto;
+	width: 50%;
+}
+
+.acc-info-show:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.acc-change {
+	display: none;
+	width: 90%;
+	height: 170px;
+	margin: 10px 5% 50px 5%;
+}
+
+.acc-change-input {
+	width: 100%;
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+	margin: 5px 0 15px 0;
+}
+
+.acc-change-pwd {
+	display: block;
+	color: var(--bttn);
+	background-color: var(--bttn-bckgrnd);
+	margin: 10px 25% 10px 25%;
+	text-align: center;
+	border-top: 1px solid var(--bttn-brdr);
+  border-right: 1px solid var(--bttn-brdr);
+  border-bottom: 1px solid var(--bttn-brdr);
+  border-left: 1px solid var(--bttn-brdr);
+	width: 50%;
+  text-decoration: none;
+}
+
+.acc-change-pwd:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.acc-change-pwd:visited {
+	color: var(--bttn);
+}
+
+.acc-change-submit {
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+	width: 50%;
+	margin: 10px 25% 60px 25%;
+}
+
+.acc-change-submit:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+@media (min-width: 870px) {
+.acc {	width: 820px;	}
+.acc-info-show {	margin-bottom: 10px;	}
+.acc-change {	float: left;	width: 400px;	}
+.acc-change-submit {	margin-bottom: 10px;	}
+}
+
+.acc-error{
+	text-align: center;
+	padding: 20px 20px 20px 20px;
+}
+
+/* ================ Change/index.php ===============*/
+.change {
+	height: 440px;
+	width: 300px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+@media (min-width: 870px) {
+.change {	width: 420px;}
+}
+
+.change > * {
+	font-size: 1.2em;
+}
+
+.change-txt {
+	display: block;
+	margin: 50px auto 0px auto;
+	width: 80%;
+}
+
+.change-pwd {
+	display: block;
+	margin: 30px auto 0px auto;
+	width: 80%;
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+	border-radius: 5px;
+}
+
+.change-submit {
+	display: block;
+	margin: 40px auto 0px auto;
+	width: 50%;
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+	border-radius: 5px;
+}
+
+.change-submit:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.change-error {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+
+/*	==========	Picture/index.php	============= */
+.upld-cont {
+	min-width: 350px;
+	width: 90%;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+.upld-cont-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	max-width: 90%;
+	max-height: 1100px;
+	text-align: center;
+}
+
+.upld-cont-form {
+	width: 80%;
+	margin: 15px auto;
+	text-align: center;
+}
+
+.upld-cont-form-file {
+	display: block;
+	margin: 5px auto 5px auto;
+	text-align: center;
+	width: 30%;
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+	border-radius: 5px;
+}
+
+.upld-cont-form-file:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.upld-hidden-file {
+	display: none;
+}
+
+.upld-cont-form-title {
+	display: block;
+	margin: 30px auto 5px auto;
+	text-align: center;
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+
+}
+
+.upld-cont-form-desc {
+	display: block;
+	width: 80%;
+	max-height: 150px;
+	margin: 5px auto 5px auto;
+	overflow-y: auto;
+	text-align: justify;
+	background-color: var(--box-bckgrnd);
+	color: var(--box-txt);
+}
+
+.upld-cont-form-tags {
+	display: block;
+	width: 80%;
+	height: 50px;
+	margin: 10px auto 5px auto;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.upld-cont-form-tag {
+	margin-right: 10px;
+	pading: 15px 15px 15px 15px;
+	background-color: var(--bttn-bckgrnd);
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.upld-cont-form-tag:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+	
+}
+
+.upld-cont-form-submit {
+	display: block;
+	margin: 30px auto 50px auto;
+	text-align: center;
+	width: 30%;
+	background-color: var(--bttn-bckgrnd);
+	color: var(--bttn);
+	border-radius: 5px;
+}
+
+.upld-cont-form-submit:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+}
+
+.upld-cont-error {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* ===========	Moderator.php =========== */
+
+.mod {
+	min-width: 350px;
+	width: 90%;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--plain-bckgrnd);
+}
+
+.mod-form-td {
+	width: 80%;
+	margin: 20px auto;
+}
+
+.mod-tags{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tag-inline{
+	display: inline-block;
+	margin: 0px 10px 10px 0px;
+	pading: 15px 15px 15px 15px;
+	background-color: var(--bttn-bckgrnd);
+}
+
+.tag-inline:hover {
+	background-color: var(--bttn-bckgrnd-hvr);
+	color: var(--bttn-hvr);
+	cursor: pointer;
+	
+}
+
+.mod-form-add {
+	width: 80%;
+	margin: 20px auto;
+}
+
+.mod-userlist {
+	width: 80%;
+	margin: 20px auto 60px auto;
+}
+
+.mod-user {
+	display: inline-block;
+	margin: 0px 10px 10px 0px;
+}
+
+.error {
+	color: var(--error);
+	margin: 5px 0 5px 0;
+	font-size: 0.8em;
+}
