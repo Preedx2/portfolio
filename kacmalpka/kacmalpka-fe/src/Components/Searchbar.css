@@ -1,0 +1,12 @@
+.search {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #f2d2bd;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    width: 100%;
+  }
+}

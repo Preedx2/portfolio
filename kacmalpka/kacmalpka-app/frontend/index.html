@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Strona główna - Kacmałpka</title>
+    <style>
+      .product-card {
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          margin: 10px;
+          padding: 10px;
+      }
+  
+      .product-image {
+          max-width: 100%;
+          height: auto;
+      }
+  
+      .product-title {
+          font-weight: bold;
+      }
+  
+      .product-price {
+          color: #e67e22;
+      }
+  
+      .add-to-cart-button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+  
+      .add-to-cart-button:hover {
+          background-color: #0056b3;
+      }
+  </style>
+
+  </head>
+  <body style="background-color: bisque;">
+    <nav class="navbar navbar-expand-lg navbar-light navstyle">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" style="height: 100px; width: 100px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto navstyle">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html" style="background-color: #3C2F0E;
+              color: bisque;
+              font-family:'Times New Roman', Times, serif;">Kacmałpka <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle navstyle" style="background-color: #3C2F0E;
+              color: bisque;
+              font-family:'Times New Roman', Times, serif;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produkty
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="wodka.html">Wódka</a>
+                <a class="dropdown-item" href="whisky.html">Whisky</a>
+                
+                <a class="dropdown-item" href="likiery.html">Likiery</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="background-color: #3C2F0E;
+              color: bisque;
+              font-family: 'Times New Roman' , Times, serif;"><img src="img/baseline_person_white_24dp.png">  Logowanie</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+          </form>
+        </div>
+      </nav>
+
+
+
+
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm">
+                <img src="img/baner-wodka.jpg" class="img-fluid imgcent">
+                </div>
+                <div class="col-sm">
+                    <img src="img/baner_rumy.jpg" class="img-fluid imgcent">
+                </div>
+                <div class="col-sm">
+                    <img src="img/baner_likiery.jpg" class="img-fluid imgcent">
+                </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <img src="img/baner-personalizacja_jd.jpg"class="img-fluid imgcent">
+                </div>
+                <div class="col-sm">
+                    <img src="img/BANER-KONIAKI.jpg"class="img-fluid imgcent">
+                </div>
+                <div class="col-sm">
+                    <img src="img/baner-1757-vermouth-di-torino.jpg" class="img-fluid  imgcent">
+                </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col order-last sele" style="text-align: left;">
+                  Nowości
+                </div>
+                <div class="col sele" style="text-align: center;">
+                  Promocje/
+                </div>
+                <div class="col order-first sele" style="text-align: right;">
+                  Bestseller/
+                </div>
+              </div>
+        </div>
+        <div class="row">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="product-card">
+                  <img src="product3.jpg" class="product-image" alt="Produkt 3">
+                  <h5 class="product-title">Produkt 3</h5>
+                  <p>Opis produktu 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="product-price"><strong>Cena: $39.99</strong></p>
+                  <button class="add-to-cart-button">Dodaj do koszyka</button>
+              </div>
+            
+              </div>
+              <div class="carousel-item">
+                <div class="product-card">
+                  <img src="product3.jpg" class="product-image" alt="Produkt 3">
+                  <h5 class="product-title">Produkt 3</h5>
+                  <p>Opis produktu 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="product-price"><strong>Cena: $39.99</strong></p>
+                  <button class="add-to-cart-button">Dodaj do koszyka</button>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="product-card">
+                  <img src="product3.jpg" class="product-image" alt="Produkt 3">
+                  <h5 class="product-title">Produkt 3</h5>
+                  <p>Opis produktu 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="product-price"><strong>Cena: $39.99</strong></p>
+                  <button class="add-to-cart-button">Dodaj do koszyka</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Footer -->
+<footer class="text-center  bgall">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Skontaktuj się z nami przez nasze sociale:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3 text-secondary"></i><img src="img/baseline_business_black_24dp.png">KacMałpka
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i><img src="img/baseline_location_city_black_24dp.png"> Opole, OP 45-000, PL</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              sklep@kacmalpka.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i><img src="img/baseline_phone_black_24dp.png"> + 48 234 567 88</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i><img src="img/baseline_phone_iphone_black_24dp.png"> + 48 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">KacMałpka.com.pl</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

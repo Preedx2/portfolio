@@ -1,0 +1,50 @@
+.info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.info-container > .info {
+  margin-left: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid black;
+}
+
+.info h3 {
+  font-size: 1.2rem;
+}
+
+.info p {
+  font-size: 0.9rem;
+}
+
+.icon-size {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .info-container {
+    margin: 20px 0px;
+    flex-direction: column;
+  }
+
+  .info h3 {
+    font-size: 0.9rem;
+  }
+
+  .info p {
+    font-size: 0.7rem;
+  }
+
+  .icon-size {
+    font-size: 1.5rem;
+  }
+}

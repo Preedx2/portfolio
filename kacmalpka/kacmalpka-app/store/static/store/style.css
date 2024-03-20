@@ -1,0 +1,59 @@
+.navstyle
+{
+    background-color: #3C2F0E;
+    color: bisque;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+.imgcent
+{
+    display: flex;
+ 
+align-items:center;
+}
+
+.row
+{
+margin: 10px;
+}
+
+.sele
+{
+font-size: x-large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: chartreuse;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.product-price {
+    color: #e67e22;
+}
+
+.add-to-cart-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3;
+}

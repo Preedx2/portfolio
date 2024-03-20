@@ -1,0 +1,37 @@
+.footer-about {
+  margin-right: 20px;
+}
+
+.footer-scontact {
+  margin-left: 20px;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-summary {
+  font-size: 0.8rem;
+}
+
+.footer-about-title {
+  font-size: 1rem;
+}
+
+.two-columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

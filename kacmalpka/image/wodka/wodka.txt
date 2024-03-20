@@ -1,0 +1,24 @@
+1
+Żubrówka biała
+27,99
+Tradycyjna polska wódka. Produkt najwyższej jakości. Smak docenią zarówno koneserzy i miłośnicy drinków. Zachwyci swym smakiem nie tylko ciebie ale również twoich przyjaciół.
+2
+Biały bocian
+35,99
+Wódka klasy premium, charakteryzuje się niezwykłą delikatnością. Powstaje wyłącznie z niemodyfikowanych generycznie polskich zbóż pochodzących z wielkopolski.
+3
+Krupnik
+29,99
+To najwyższej jakości polska wódka. Swój smak uzyskuje dzięki wyselekcjonowanym gatunkom zbóż i krystalicznie czystej wodzie. Tradycją sięga do oryginalnej receptury z XVII wieku.
+4
+Ogiński
+39,90
+Wybitnie czysta wódka. Zgodnie z jej regułami powstaje z dobierania ziaren kukurydzy tak by dały najwyższej jakości spirytus, który harmonijnie łączy się z krystalicznie czystą wodą.
+5
+Stumbras z kłosem
+38,99
+Jest to produkt który doceni każdy miłośnik mocniejszych trunków. Mocny smak osiągany jest dzięki tradycyjnej recepturze i w specjalnym procesie produkcji.
+6
+Żołądkowa gorzka de Luxe
+28,90
+Jest ona trzecią z najlepiej sprzedających się czystych wódek w Polsce. Posiada neutralny smak i łagodny delikatny zapach.

@@ -1,0 +1,32 @@
+.cart-head {
+    max-width: 1080px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.cart-main {
+    margin: auto;
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+}
+
+.cart-main .cart-card:nth-child(n+1) {
+    margin-top: 10px;
+}
+
+.cart-cards-container {
+    margin: 10px;
+    padding: 5px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.wrapper {
+  margin: 10px;
+  padding: 5px;
+  height: 100vh;
+}

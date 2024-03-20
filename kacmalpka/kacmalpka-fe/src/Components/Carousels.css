@@ -1,0 +1,22 @@
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.carousel-indicators > button {
+  height: 7px !important;
+  background-color: var(--bg-main) !important;
+}
+
+.hero img {
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex !important;
+  }
+}

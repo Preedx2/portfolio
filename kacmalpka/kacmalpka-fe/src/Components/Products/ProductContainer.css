@@ -1,0 +1,8 @@
+.container {
+    margin: 25px auto;
+    max-width: 1080px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}

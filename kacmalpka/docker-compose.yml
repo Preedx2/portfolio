@@ -1,0 +1,59 @@
+version: '3.2'
+
+services:
+  kacmalpka-mysql:
+    image: "mysql:5.7"
+    platform: linux/amd64
+    container_name: kacmalpka-mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - 3306:3306
+    ulimits:
+      nofile:
+        soft: "1024"
+        hard: "2048"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootkacmalpka
+      - MYSQL_DATABASE=kacmalpka
+      - MYSQL_USER=kacmalpka
+      - MYSQL_PASSWORD=kacmalpka
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+
+  kacmalpka-app:
+    build: ./kacmalpka-app
+    container_name: kacmalpka-app
+    volumes:
+      - ./kacmalpka-app:/app    # binduje kacmalpka-app z hosta do /app w kontenerze
+    environment:
+      - DB_SERVER=kacmalpka-mysql
+    ports:
+      - 8000:8000
+    links:
+      - kacmalpka-mysql
+    depends_on:
+      kacmalpka-mysql:
+        condition: service_healthy
+
+
+  kacmalpka-fe:
+    build: ./kacmalpka-fe
+    container_name: kacmalpka-fe
+    volumes:
+      - /react/node_modules     # pomijam folder node_modules z binda
+      - ./kacmalpka-fe:/react   # binduje podfolder kacmalpka-fe z hosta do folderu /react w kontenerze
+    ports:
+      - 3000:3000 #zmienilem na domyslne na razie
+    links:
+      - kacmalpka-app
+
+
+volumes:
+  dbdata:

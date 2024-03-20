@@ -1,0 +1,20 @@
+.menu {
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  background-color: #f2d2bd;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
+}

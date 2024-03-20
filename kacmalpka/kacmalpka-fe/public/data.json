@@ -1,0 +1,163 @@
+{
+    "wodka": [
+    {
+      "id": 1,
+      "nazwa": "Wódka Luksusowa",
+      "image_source": "./images/belt-4.jpg",
+      "opis": "Czysta i delikatna wódka luksusowa, idealna do koktajli.",
+      "cena": 199.99
+    },
+    {
+      "id": 2,
+      "nazwa": "Wódka Premium",
+      "image_source": "./images/belt-6.jpg",
+      "opis": "Czysta i delikatna wódka premum, idealna na imprezem.",
+      "cena": 199.99
+    },
+    {
+      "id": 3,
+      "nazwa": "Wódka Gold",
+      "image_source": "./images/belt-5.jpg",
+      "opis": "Czysta i delikatna wódka gold, idealna do picia.",
+      "cena": 199.99
+    }
+  ],
+  "whisky": [
+    {
+      "id": 4,
+      "nazwa": "Whisky Single Malt",
+      "image_source": "./images/belt-4.jpg",
+      "opis": "Ekskluzywna whisky o bogatym smaku i aromacie.",
+      "cena": 49.99
+    },
+    {
+      "id": 5,
+      "nazwa": "Jack Daniel",
+      "image_source": "./images/belt-3.jpg",
+      "opis": "Whisky o bogatym smaku i aromacie.",
+      "cena": 49.99
+    },
+    {
+      "id": 6,
+      "nazwa": "Whisky Blue",
+      "image_source": "./images/belt-1.jpg",
+      "opis": "Ekskluzywna whisky o bogatym smaku i aromacie.",
+      "cena": 49.99
+    }
+  ],
+  "likiery-nalewki": [
+    {
+      "id": 7,
+      "nazwa": "Likierowy Trunek",
+      "image_source": "./images/belt-4.jpg",
+      "opis": "Ekskluzywny likier o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 8,
+      "nazwa": "Trunek",
+      "image_source": "./images/belt-1.jpg",
+      "opis": "Ekskluzywny trunek o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 9,
+      "nazwa": "Nalewka",
+      "image_source": "./images/belt-2.jpg",
+      "opis": "Ekskluzywny nalewka o bogatym smaku i aromacie.",
+      "cena": 79.99
+    }
+  ],
+  "rumy": [
+    {
+      "id": 10,
+      "nazwa": "Rum Premium",
+      "image_source": "./images/belt-4.jpg",
+      "opis": "Ekskluzywny rum o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 11,
+      "nazwa": "Rum Classic",
+      "image_source": "./images/belt-2.jpg",
+      "opis": "Klasyczny rum o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 12,
+      "nazwa": "Rum PremTium",
+      "image_source": "./images/belt-5.jpg",
+      "opis": "PremTium rum o bogatym smaku i aromacie.",
+      "cena": 79.99
+    }
+  ],
+  "wina": [
+    {
+      "id": 13,
+      "nazwa": "Wino Premium",
+      "image_source": "./images/belt-4.jpg",
+      "opis": "Ekskluzywne wino o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 14,
+      "nazwa": "Wino SA",
+      "image_source": "./images/belt-2.jpg",
+      "opis": "Ekskluzywne wino SA o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 15,
+      "nazwa": "Wino MM",
+      "image_source": "./images/belt-5.jpg",
+      "opis": "Ekskluzywne wino MM o bogatym smaku i aromacie.",
+      "cena": 79.99
+    }
+  ],
+  "szampany": [
+    {
+      "id": 16,
+      "nazwa": "Szampan Premium",
+      "image_source": "./images/belt-4.jpg",
+      "opis": "Ekskluzywne wino o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 17,
+      "nazwa": "Szampan Premium",
+      "image_source": "./images/belt-1.jpg",
+      "opis": "Ekskluzywne wino o bogatym smaku i aromacie.",
+      "cena": 79.99
+    },
+    {
+      "id": 18,
+      "nazwa": "Szampan Premium",
+      "image_source": "./images/belt-2.jpg",
+      "opis": "Ekskluzywne wino o bogatym smaku i aromacie.",
+      "cena": 79.99
+    }
+  ],
+  "inne": [
+    {
+      "id": 19,
+      "nazwa": "Kufel Premium",
+      "image_source": "./images/belt-3.jpg",
+      "opis": "Ekskluzywny kufel o bogatym wnętrzu.",
+      "cena": 79.99
+    },
+    {
+      "id": 20,
+      "nazwa": "Zestaw Premium",
+      "image_source": "./images/belt-6.jpg",
+      "opis": "Ekskluzywny zestaw o bogatym wnętrzu.",
+      "cena": 79.99
+    },
+    {
+      "id": 21,
+      "nazwa": "Kufel Gold",
+      "image_source": "./images/belt-3.jpg",
+      "opis": "Pozłacany kufel o bogatym wnętrzu.",
+      "cena": 79.99
+    }
+  ]
+}

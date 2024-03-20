@@ -1,0 +1,39 @@
+.alert-window {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--bg-secondary);
+  box-shadow: 1px 4px 17px rgba(0, 0, 0, 0.98);
+}
+
+.alert-window h2 {
+  letter-spacing: 1px;
+}
+
+.alert-window p {
+  text-align: center;
+}
+
+.alert-icon {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  transform: scale(3);
+  color: #e9b402;
+}
+
+@media screen and (max-width: 768px) {
+  .alert-window {
+    margin: 20px;
+  }
+
+  .alert-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.relative {
+    position: relative;
+}
+
+.cart-items {
+    position: absolute;
+    right: -5px;
+    bottom: -10px;
+    text-align: center;
+    background-color: rgb(162, 162, 162);
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+}

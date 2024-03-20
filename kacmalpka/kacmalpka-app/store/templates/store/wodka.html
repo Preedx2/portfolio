@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    {% load static %}
+    {% load bootstrap4 %}
+    {% load mathfilters %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'store/style.css' %}">
+    <title>Wódka - Kacmałpka</title>
+</head>
+<body style="background-color: bisque;">
+<nav class="navbar navbar-expand-lg navbar-light navstyle">
+    <a class="navbar-brand" href="#"><img src="{% static 'store/img/logo.png'%}" style="height: 100px; width: 100px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto navstyle">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" style="background-color: #3C2F0E;
+          color: bisque;
+          font-family:'Times New Roman', Times, serif;">Kacmałpka <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle navstyle" style="background-color: #3C2F0E;
+          color: bisque;
+          font-family:'Times New Roman', Times, serif;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Produkty
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="wodka.html">Wódka</a>
+            <a class="dropdown-item" href="whisky.html">Whisky</a>
+
+            <a class="dropdown-item" href="likiery.html">Likiery</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="background-color: #3C2F0E;
+          color: bisque;
+          font-family: 'Times New Roman' , Times, serif;"><img src="{% static 'store/img/baseline_person_white_24dp.png'%}">  Logowanie</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+      </form>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+    {% for product in products %}
+      <!--{   % if product.condition.tag_id == 1 %   } do odblokowania po dodaniu tabeli ProductTags(wujek chatGPT mówi że ppowinno działać)    -->
+        <div class="col-md-4">
+          <div class="product-card">
+              <img src="{% static 'store/image/wodka/' %}{{ product.prod_image }}" class="product-image" alt="Produkt 3" width="100px" height="100px">
+              <h5 class="product-title">{{ product.prod_name_long }}</h5>
+              <p>{{ product.prod_description }}</p>
+              <p class="product-price"><strong>Cena:
+                {% if product.prices %}
+                {{ product.prices.price_price|div:100|floatformat:2 }} PLN
+                  {% else %}
+                  brak ceny
+                {% endif %}
+              </strong></p>
+              <button class="add-to-cart-button">Dodaj do koszyka</button>
+          </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+<div class="row">
+    {% endif %}
+  <!--{   % endif %   }-->
+{% endfor %}
+</div>
+</div>
+
+<footer class="text-center  bgall">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Skontaktuj się z nami przez nasze sociale:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3 text-secondary"></i><img src="{% static 'store/img/baseline_business_black_24dp.png'%}">KacMałpka
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i><img src="{% static 'store/img/baseline_location_city_black_24dp.png'%}"> Opole, OP 45-000, PL</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              sklep@kacmalpka.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i><img src="{% static 'store/img/baseline_phone_black_24dp.png'%}"> + 48 234 567 88</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i><img src="{% static 'store/img/baseline_phone_iphone_black_24dp.png'%}"> + 48 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">KacMałpka.com.pl</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</footer>
+</body>
+</html>

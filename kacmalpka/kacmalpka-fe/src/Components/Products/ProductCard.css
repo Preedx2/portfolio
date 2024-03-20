@@ -1,0 +1,38 @@
+.product-card {
+    border: 2px solid var(--bg-secondary);
+    width: 300px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+.product-card:hover {
+    opacity: 1;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.product-price {
+    color: #e67e22;
+}
+
+.add-to-cart-button {
+    background-color: var(--bg-secondary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    transform: scale(0.98);
+}
