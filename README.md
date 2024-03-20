@@ -9,3 +9,19 @@ Napisana bez wykorzystania żadnych bootstrapów ponieważ celem było zrobienie
 
 Strona internetowa napisana w Django i Reactcie, projekt grupowy.
 Moim zadaniem był backend Django i devops (założenie repozytorium, pilnowanie mergów, setup dockera)
+
+# Python
+
+Folder zawiera projekty napisane w pythonie:
+
+## Perceptron
+
+Napisana w pythonie implementacja pojedynczego perceptronu, który następnie jest trenowany do przewidywania odpowiedzi bramek logicznych AND, NAND i OR
+
+## SeleniumPOLib
+
+Webscrapper do pobierania informacji o książkach ze strony biblioteki politechniki opolskiej
+
+## Snake
+
+Prosta implementacja gry snake napisana przy wykorzystaniu PyGame
